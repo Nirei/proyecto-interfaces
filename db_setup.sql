@@ -54,7 +54,7 @@ CREATE TABLE CabeceraPedido (
   numPedido INTEGER,
   fechaPedido DATE,
   fechaEntrega DATE,
-  proveedor TEXT,
+  proveedor INTEGER,
   importe TEXT,
   observaciones TEXT,
   abierto TEXT
@@ -71,15 +71,14 @@ CREATE TABLE CuerpoPedido (
   abierto TEXT
 );
 
-
-
 CREATE TABLE EntradaSalida (
-id INTEGER,
-codProveedor INTEGER,
-codCliente INTEGER,
-codArticulo INTEGER,
-unidades INTEGER,
-precio INTEGER,
-fecha DATE,
-tipo TEXT,
-numero INTEGER);
+  id INTEGER,
+  codProveedor INTEGER,
+  codCliente INTEGER,
+  codArticulo INTEGER,
+  unidades INTEGER,
+  precio INTEGER,
+  fecha DATE,
+  tipo TEXT,
+  numero INTEGER
+);

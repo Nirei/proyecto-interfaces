@@ -15,14 +15,19 @@ class Table:
 
     def findAll(self):
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM %s' % self.tableName)
+        cursor.execute('SELECT rowid, * FROM %s' % self.tableName)
         return cursor
 
     def create(self, data):
         pass
 
     def update(self, data):
-        pass
+        cursor = conn.cursor()
+        cursor.execute(
+            'UPDATE %s SET nombre=?, direccion=?, provincia=?, cp=?, telefono=? WHERE rowid=?' % self.tableName,
+            (data[1], data[2], data[3], data[4], data[5], data[0])
+        )
+        return cursor
 
     def delete(self, id):
         cursor = conn.cursor()

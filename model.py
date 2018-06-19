@@ -12,3 +12,6 @@ class Model:
 
     def listAlmacen(self):
         return [almacen for almacen in self.tablaAlmacen.findAll()]
+
+    def updateAlmacen(self, data):
+        return self.tablaAlmacen.update(data)

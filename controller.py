@@ -12,3 +12,6 @@ class Controller:
 
     def listAlmacen(self):
         return self.model.listAlmacen()
+
+    def updateAlmacen(self, almacen):
+        return self.model.updateAlmacen(almacen)
