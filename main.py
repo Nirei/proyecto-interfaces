@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from controller import Controller
 from model import Model
 from view import View

@@ -33,24 +33,53 @@ CREATE TABLE LineaArticulos (
 );
 
 
-/*
-CREATE TABLE Proveedores (, , ,);
+
+CREATE TABLE Proveedores (
+  id INTEGER,
+  nombre TEXT,
+  alias TEXT,
+  poblacion TEXT,
+  provincia TEXT,
+  cp TEXT,
+  nif TEXT,
+  correo TEXT,
+  telefono TEXT,
+  contacto TEXT,
+  observaciones TEXT
+);
 
 
-CREATE TABLE CabeceraPedido (, , ,);
+CREATE TABLE CabeceraPedido (
+  id INTEGER,
+  numPedido INTEGER,
+  fechaPedido DATE,
+  fechaEntrega DATE,
+  proveedor TEXT,
+  importe TEXT,
+  observaciones TEXT,
+  abierto TEXT
+);
 
 
-CREATE TABLE CuerpoPedido (, , ,);
+CREATE TABLE CuerpoPedido (
+  id INTEGER,
+  numPedido INTEGER,
+  codArticulo INTEGER,
+  unidadPedido INTEGER,
+  unidadRecibido INTEGER,
+  precioCoste INTEGER,
+  abierto TEXT
+);
 
 
-CREATE TABLE EntradaSalida (, , ,);
 
-
-CREATE TABLE Mantenimiento (, , ,);
-
-
-CREATE TABLE GrabacionPedidos (, , ,);
-
-
-CREATE TABLE Estadisticas (, , ,);
-*/
+CREATE TABLE EntradaSalida (
+id INTEGER,
+codProveedor INTEGER,
+codCliente INTEGER,
+codArticulo INTEGER,
+unidades INTEGER,
+precio INTEGER,
+fecha DATE,
+tipo TEXT,
+numero INTEGER);
